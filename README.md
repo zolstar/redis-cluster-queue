@@ -3,6 +3,8 @@
 Simple queue on Redis Cluster and single redis instance. This plugin also supports AWS ElastiCache as well.
 Auto discover redis is enable cluster mode or not and recreate connection again.
 
+[![Build Status](https://app.travis-ci.com/zolstar/redis-cluster-queue.svg?branch=main)](https://app.travis-ci.com/zolstar/redis-cluster-queue.svg?branch=main)
+
 ## License
 
 This plugin is licensed under the MIT license and can ve viewed in the LICENSE file.
