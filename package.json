@@ -1,0 +1,41 @@
+{
+  "name": "redis-cluster-queue",
+  "version": "1.0.0",
+  "description": "Redis Cluster Queue supports both Single Redis and Redis Cluster",
+  "keywords": [
+    "redis",
+    "typescript",
+    "redis cluster",
+    "redis queue",
+    "redis cluster queue"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "lint": "tsc --noEmit && eslint \"{src,test}/**/*.{js,ts}\" --fix",
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "dependencies": {
+    "ioredis": "^4.27.7"
+  },
+  "devDependencies": {
+    "@types/ioredis": "^4.26.7",
+    "@types/jest": "^27.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "jest": "^27.0.6",
+    "prettier": "^2.3.2",
+    "ts-jest": "^27.0.5",
+    "ts-node": "^10.2.0",
+    "typescript": "^4.3.5"
+  }
+}
